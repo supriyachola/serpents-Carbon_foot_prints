@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carbon Footprint Calculator</title>
+
+  <link rel="stylesheet" href="calculate.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="title">Advanced CO₂ Footprint Calculator</h1>
+    <p class="subtitle">Enter your weekly activity to get a detailed emissions breakdown.</p>
+
+    <!-- Timeframe -->
+    <div class="timeframe">
+      <label><input type="radio" name="timeframe" value="week" checked> Weekly</label>
+      <label><input type="radio" name="timeframe" value="month"> Monthly</label>
+      <label><input type="radio" name="timeframe" value="year"> Yearly</label>
+    </div>
+
+    <!-- FORM START -->
+    <form id="carbonFootprintForm">
+
+      <!-- TRANSPORT -->
+      <h2 class="section-title">🚗 Transport</h2>
+      <div class="grid-2">
+        <div>
+          <label>Distance Travelled (km)</label>
+          <input type="number" id="transport_km" placeholder="e.g., 60" min="0">
+        </div>
+
+        <div>
+          <label>Mode of Transport</label>
+          <select id="transport_type">
+            <option value="car">Car (Petrol)</option>
+            <option value="bike">Bike</option>
+            <option value="bus">Bus</option>
+            <option value="train">Train</option>
+            <option value="ev">Electric Vehicle</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ELECTRICITY -->
+      <h2 class="section-title">⚡ Electricity Usage (mins/day)</h2>
+      <div class="grid-3">
+        <div><label>LED Bulb</label><input id="led_min" type="number"></div>
+        <div><label>Fan</label><input id="fan_min" type="number"></div>
+        <div><label>AC</label><input id="ac_min" type="number"></div>
+        <div><label>Laptop</label><input id="laptop_min" type="number"></div>
+        <div><label>Mobile Charging</label><input id="mobile_min" type="number"></div>
+      </div>
+
+      <!-- FOOD -->
+      <h2 class="section-title">🍽 Food Consumption</h2>
+      <div class="grid-3">
+        <div><label>Veg Meals</label><input id="veg_meals" type="number"></div>
+        <div><label>Non-Veg Meals</label><input id="nonveg_meals" type="number"></div>
+        <div><label>Fast Food Meals</label><input id="fastfood_meals" type="number"></div>
+        <div><label>Dairy (litres)</label><input id="dairy_litre" type="number"></div>
+      </div>
+
+      <!-- WASTE -->
+      <h2 class="section-title">🗑 Waste Generated (kg)</h2>
+      <div class="grid-3">
+        <div><label>Plastic Waste</label><input id="plastic_kg" type="number"></div>
+        <div><label>Paper Waste</label><input id="paper_kg" type="number"></div>
+        <div><label>Wet Waste</label><input id="wet_kg" type="number"></div>
+        <div><label>E-Waste</label><input id="ewaste_kg" type="number"></div>
+      </div>
+
+      <!-- PURCHASED ITEMS -->
+      <h2 class="section-title">🛒 Purchased Items</h2>
+      <div class="grid-3">
+        <div><label>Clothes</label><input id="clothes" type="number"></div>
+        <div><label>Electronics</label><input id="electronics" type="number"></div>
+        <div><label>Cosmetics</label><input id="cosmetics" type="number"></div>
+        <div><label>Packaged Items</label><input id="packaged" type="number"></div>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="btn-row">
+        <button type="submit" class="btn-primary">Calculate</button>
+        <button type="button" id="saveBtn" class="btn-secondary">Save</button>
+        <button type="button" id="pdfBtn" class="btn-secondary">PDF</button>
+        <button type="button" id="aiAdviceBtn" class="btn-secondary">AI Advice</button>
+        <button type="reset" class="btn-clear">Clear</button>
+      </div>
+    </form>
+
+    <!-- RESULT -->
+    <div id="result" class="result-box"></div>
+
+    <!-- CHART -->
+    <canvas id="breakdownChart" height="260"></canvas>
+
+    <!-- AI ADVICE -->
+    <div id="aiAdvice" class="advice-box" style="display:none;"></div>
+
+    <!-- HISTORY -->
+    <div id="history" class="history-box" hidden>
+      <h2>Saved Results</h2>
+      <ul id="historyList"></ul>
+      <button id="clearHistoryBtn" class="btn-clear">Clear History</button>
+    </div>
+
+  </div>
+
+  <!-- External libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="calculate.js"></script>
+</body>
+</html>

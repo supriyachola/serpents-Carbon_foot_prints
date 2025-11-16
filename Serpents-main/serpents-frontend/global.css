@@ -1,0 +1,167 @@
+/* ================================================================
+   🌿 GLOBAL ECO GREEN THEME — Clean, Modern, Polished
+   ================================================================= */
+
+/* ==== RESET + FONT ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==== BODY ==== */
+/* Works for both gradient theme + background image theme */
+body {
+  background: linear-gradient(135deg, #e6ffe6, #f4fff4);
+  color: #124d2f;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Optional FULL background image — enable if needed */
+/*
+body {
+  background-image: url("Login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+*/
+
+/* ==== ANIMATIONS ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes leafFloat {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-18px) rotate(6deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* ==== BUTTONS ==== */
+button,
+.btn {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover,
+.btn:hover {
+  background: #35a36b;
+  transform: scale(1.03);
+}
+
+/* ==== CARDS ==== */
+.card {
+  background: #ffffffcc;
+  border: 1px solid #d7f5d7;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease;
+}
+
+/* ==== TYPOGRAPHY ==== */
+h1, h2, h3 {
+  color: #1a663d;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ==== NAVBAR ==== */
+header {
+  background: rgba(26, 102, 61, 0.9);
+  color: white;
+  padding: 14px 0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #c8ffda;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ==== INPUTS ==== */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #b6e8c7;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 6px rgba(46, 139, 87, 0.4);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 14px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  button,
+  .btn {
+    font-size: 15px;
+  }
+}

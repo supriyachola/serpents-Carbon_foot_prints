@@ -1,0 +1,102 @@
+/* Eco-Green Theme Signup Page */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e6ffe6, #f4fff4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating leaf effect */
+@keyframes leafFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Signup card */
+.signup-box {
+  background: #ffffffee;
+  padding: 28px;
+  width: 330px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Title */
+.signup-box h2 {
+  margin-bottom: 20px;
+  color: #1a663d;
+  animation: leafFloat 3s infinite ease-in-out;
+}
+
+/* Input fields */
+.signup-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #bff0c6;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.signup-box input:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 8px rgba(46,139,87,0.4);
+}
+
+/* Button */
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  margin-top: 10px;
+}
+
+.signup-box button:hover {
+  background: #35a36b;
+  transform: scale(1.03);
+}
+
+/* Redirect text */
+.signup-box p {
+  margin-top: 15px;
+  color: #145c35;
+  font-size: 14px;
+}
+
+.signup-box a {
+  color: #1a7e4a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+body {
+  background-image: url('Login.jpg');
+  background-size: cover;        /* covers entire screen */
+  background-position: center;   /* center image */
+  background-repeat: no-repeat;  /* prevent repeating */
+  background-attachment: fixed;  /* parallax effect */
+}

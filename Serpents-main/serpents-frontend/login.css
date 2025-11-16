@@ -1,0 +1,102 @@
+/* Eco-Green Login Page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e6ffe6, #f4fff4);
+  animation: fadeIn 0.6s ease;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating leaf animation */
+@keyframes leafFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Login card */
+.login-box {
+  width: 330px;
+  background: #ffffffee;
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  animation: fadeIn 0.9s ease;
+}
+
+/* Title text */
+.login-box h2 {
+  color: #1a663d;
+  margin-bottom: 18px;
+  animation: leafFloat 3s infinite ease-in-out;
+}
+
+/* Input fields */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #b7eccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s;
+}
+
+.login-box input:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 8px rgba(46,139,87,0.4);
+}
+
+/* Login button */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.25s;
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  background: #35a36b;
+  transform: scale(1.03);
+}
+
+/* Redirect text */
+.redirect {
+  margin-top: 14px;
+  color: #145c35;
+  font-size: 14px;
+}
+
+.redirect a {
+  color: #1a7e4a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.redirect a:hover {
+  text-decoration: underline;
+}
+body {
+  background-image: url('Login.jpg');
+  background-size: cover;        /* covers entire screen */
+  background-position: center;   /* center image */
+  background-repeat: no-repeat;  /* prevent repeating */
+  background-attachment: fixed;  /* parallax effect */
+}
